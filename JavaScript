@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+   <script>
+  function temp(unit){
+     //document.getElementById('celsius').value += p;
+       var f = document.getElementById('fahrenheit');
+       var c = document.getElementById('celsius');
+
+       switch(unit){
+           case 'f':
+               f.value = c.value * 9/5 + 32;
+                   Math.round(f);
+               break;
+           case 'c':
+               c.value=f.value * 5/9 -32;
+                Math.round(c);
+               break;
+
+
+       }
+
+}
+   </script>
+</head>
+<form>
+    <body>
+    <center>
+<h2> Temperature Converter</h2>
+  <h3>Insert a number into one of the input fields below to begin :</h3>
+<table>
+    <tr>
+        <td>
+            <input type="text" id="celsius" name="celsius" onkeyup="temp('f')">
+            <label for="celsius"> degree Celsius</label> <br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            equals
+        </td>
+    </tr>
+        <tr>
+        <td>
+            <input type="text" id="fahrenheit" name="fahrenheit" onkeyup="temp('c')">
+            <label for="fahrenheit">degree Farenheit</label>
+        </td>
+       </tr>
+</table>
+        </center>
+</body>
+    </form>
+</html>
